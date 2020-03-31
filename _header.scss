@@ -1,0 +1,178 @@
+header{
+  $font-size: 17px;
+
+  @include line-text-height();
+  background-image: linear-gradient(rgb(127, 106, 230),  #785EF0 );
+  color: $header-font-color;
+
+  .logo {
+    padding: $padding;
+    font-family: 'Leckerli One', cursive;
+    font-size: 3em;
+    padding: 25px 50px;
+  }
+
+  h1{
+    padding: $padding;
+
+    font-size:4.25em;
+  }
+
+  h5{
+    padding: $padding;
+    font-size: $font-size + 3;
+  }
+  p {
+    padding: $padding;
+  }
+
+  .car {
+    padding: $padding;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+      label {
+        display: flex;
+        align-items: center;
+      }
+      div {
+        padding: 0px 10px;
+      }
+
+  }
+
+  .customised-input {
+    position: relative;
+
+    @include input-style();
+    // visibility: hidden;
+    
+  }
+
+  .holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px;
+
+    label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    input[type=tel]{
+      padding:20px 20px;
+      background-color: rgb(46, 34, 104);
+      border:none;
+      width:100%;
+      color: white;
+      border-radius: 10px;
+      &::placeholder {
+        color:white;
+      }
+    }
+
+    .phone-holder{
+      width:300px;
+      margin-right: 40px;
+    }
+
+    input[type=checkbox]{
+      @include input-style($checkbox:true);
+      border-radius: 0;
+      :checked{
+        border-radius: 0;
+
+      }
+    }
+
+
+  }
+
+  .next-button {
+    margin:25px 0px; 
+    padding: 16px 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 5px   rgb(46, 34, 104);
+    text-transform: uppercase;
+    width:200px;
+    height:60px;
+    &:hover{
+      transition: all 0.5s ease-in-out;
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: all 0s ease-in-out;
+
+    }
+  }
+
+
+  .check-status {
+  margin: $padding;
+  a {
+    color:white;
+  }
+
+}
+
+}
+
+.info {
+  opacity:0;
+margin-left:100px;
+}
+
+.info-two{
+  position: relative;
+  top:300px;
+}
+
+.info-three{
+  position: relative;
+  left:300px;
+}
+
+.error-message {
+
+  padding:5px 10px;
+  display: inline;
+  align-items: center;
+  opacity:0;
+  @include flex-row(row);
+
+}
+
+.error-icon {
+  height:32px;
+  width:40px;
+  padding: 6px 10px;
+}
+
+// .error-holder > div{
+//   position: relative;
+//   display: inline;
+// }
+
+.error-holder-a {
+  // display:inline;
+ @include flex-row(row);
+  
+
+}
+
+.error-holder-b {
+position: absolute;
+left: 350px;
+top: 140px;
+@include flex-row(row);
+
+}
+
+
+
